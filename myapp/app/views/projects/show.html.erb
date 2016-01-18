@@ -1,0 +1,32 @@
+
+<%  title(@project.name, "Projects") %>
+<%  @project.name %>
+<table border="1" cellspacing = 5 cellpadding = 5>
+  <tr>
+    <td colspan="3" align=center> PROJECT DETAILS </td>
+  </tr>
+  <tr>
+    <td>Project_ID </td>
+    <td>Project_Name</td>
+    <td>Description</td>
+  </tr>
+
+
+  <tr>
+    <td><%= @project.id %></td>
+    <td><%= @project.name %></td>
+    <td><%= @project.description %></td>
+  </tr>
+
+</table>
+
+<%= link_to 'Edit Project',edit_project_path(@project)%>
+
+<%= link_to "Delete Project",
+    project_path(@project),
+    method: :delete,
+    data: {
+              confirm:
+              "Are You Sure You Want To delete Project?"
+          }
+    %>
