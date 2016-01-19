@@ -1,10 +1,11 @@
 
-<%= form_for(@project) do |f| %>
+<%= form_for (@project) do |f| %>
+
   <% if @project.errors.any? %>
     <div id = "error_explination">
       <h2>
         <%= pluralize(@project.errors.count,"error") %>
-          prohibited from this project being saved
+          prohibited from this project being saved:
       </h2>
       <ul>
         <% @project.errors.full_messages.each do |msg| %>
