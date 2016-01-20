@@ -11,25 +11,61 @@
       </div>
   <% end %>
 
-<p>
-<%= f.label :name, "Username" %><br>
-<%= f.text_field :name %>
-</p>
+<table align="center" cellspacing = 10 cellpadding = 10 border = 1>
+    <tr align = center>
+      <td colspan = "2">
+        <h3> User Sign Up Area </h3>
+      </td>
+    </tr>
 
-<p>
-<%= f.label :email %><br>
-<%= f.text_field :email %>
-</p>
+    <tr>
+      <td>
+        <%= f.label :name, "username" %>
+      </td>
+      <td>
+        <%= f.text_field :name %>
+      </td>
+    </tr>
 
-<p>
-<%= f.label :password %><br>
-<%= f.password_field :password %>
-</p>
+    <tr>
+      <td>
+        <%= f.label :email %><br>
+      </td>
+      <td>
+        <%= f.text_field :email%>
+      </td>
+    </tr>
 
-<p>
-<%= f.label :password_confirmation %><br>
-<%= f.password_field :password_confirmation %>
-</p>
+    <tr>
+      <td>
+      <%= f.label :password %><br>
+      </td>
+      <td>
+        <%= f.password_field :password %>
+      </td>
+    </tr>
 
-<%= f.submit "Sign up" %>
+    <tr>
+      <td>
+      <%= f.label :password_confirmation%><br>
+      </td>
+      <td>
+        <%= f.password_field :password_confirmation %>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" align = "right">
+        <% if @user.new_record? %>
+          <%= f.submit "Sign up" %>
+        <% else %>
+          <%= f.submit "Update Profile" %>
+        <% end %>
+
+      </td>
+    </tr>
+
+</table>
+
+
 <% end %>
