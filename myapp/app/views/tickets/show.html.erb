@@ -2,6 +2,8 @@
   <h2>
     <%= @ticket.title %>
   </h2>
+    <span id = "author"> Created by <%= @ticket.user.email %></span>
+
   <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
   <%= simple_format(@ticket.description)%>
 
