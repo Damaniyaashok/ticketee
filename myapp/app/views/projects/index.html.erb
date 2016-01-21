@@ -1,8 +1,25 @@
-<%= link_to 'New Project', new_project_path%>
 
-<h2> Projects </h2>
-  <ul>
-    <% @project.each do |project| %>
-      <li> <%= link_to project.name, project %>
-    <% end %>
-  </ul>
+
+<br><br><br><br><br><br><br>
+
+
+<table align = center cellpadding = 10 cellspacing = 10 border = 1>
+  <tr >
+    <td colspan="2" align = rigth><%= link_to 'New Project', new_project_path%></td>
+  </tr>
+
+  <tr bgcolor = "skyblue">
+      <td>
+        <h2> Projects </h2>
+      </td>
+
+      <td >
+        <ul>
+          <% @project.each do |project| %>
+            <li> <%= link_to project.name, project %>
+          <% end %>
+        </ul>
+      </td>
+  </tr>
+
+</table>

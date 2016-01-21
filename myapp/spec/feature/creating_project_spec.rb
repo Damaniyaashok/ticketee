@@ -3,11 +3,16 @@ require 'spec_helper'
 feature 'Creating Projects' do
 
   before do
+    user = FactoryGirl.create(:user)
+    puts "===========----"
+    puts user.inspect
+    puts "===========----"
+    sign_in_as!(user)
     visit '/'
     click_link 'New Project'
   end
   scenario "can create project" do
-    
+
     fill_in 'Name', with: "TextMate 2"
     fill_in 'Description', with: "Editor For The OS X"
     click_button 'Create Project'

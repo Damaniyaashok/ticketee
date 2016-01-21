@@ -13,15 +13,40 @@
     </div>
   <% end %>
 
-  <p>
+<br><br><br><br>
+<table cellpadding = "10" cellspacing = "10" border="1" align  = "center">
+  <tr > 
+    <td colspan = "2" align = center>
+      <h2> New Ticket </h2>
+    </td>
+  </tr>
+  <tr>
+    <td>
       <%= f.label :title %> <br />
-      <%= f.text_field :title %>
-  </p>
-  <p>
-      <%= f.label :description %>
-      <%= f.text_area :description %>
-  </p>
 
-  <%= f.submit %>
+    </td>
+    <td>
+      <%= f.text_field :title %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <%= f.label :description %>
+
+    </td>
+    <td>
+      <%= f.text_area :description %>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" align = "right">
+        <%= f.submit %>
+    </td>
+  </tr>
+</table>
+
+
 
   <% end %>

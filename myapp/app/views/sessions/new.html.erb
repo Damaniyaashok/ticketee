@@ -1,14 +1,41 @@
-<h1> Sign in </h1>
+
 
 <%= form_for :signin, method: "POST" do |f| %>
-  <p>
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-  </p>
-  <p>
-      <%= f.label :password %>
-      <%= f.password_field :password%>
-  </p>
 
-  <%= f.submit "Sign in"%>
+<br><br><br><br><br><br><br><br><br>
+<table align = "center" cellpadding = "5" cellspacing = "5" border = "1">
+    <tr>
+      <td colspan="2" align = "center">
+          <h2>User Sing In </h2>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :name %><br />
+      </td>
+      <td>
+        <%= f.text_field :name %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :password %>
+
+      </td>
+      <td>
+        <%= f.password_field :password%>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" align="right">
+        <%= f.submit "Sign in"%>
+      </td>
+    </tr>
+
+</table>
+
 <% end %>
