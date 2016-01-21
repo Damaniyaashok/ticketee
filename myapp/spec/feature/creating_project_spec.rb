@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Creating Projects' do
 
   before do
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:admin_user)
     puts "===========----"
     puts user.inspect
     puts "===========----"
